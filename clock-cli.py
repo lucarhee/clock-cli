@@ -35,9 +35,6 @@ def get_now():
 
 
 def print_big_clock(t:tuple) -> None:
-    ...
-
-def print_small_clock(t:tuple) -> None:
     hour = t[0]
     minute = t[1]
     second = t[2]
@@ -49,7 +46,12 @@ def print_small_clock(t:tuple) -> None:
     if second < 10:
         second = "0" + str(t[2])
 
-    print(f"{hour}:{minute}:{second}")
+def print_small_clock(t:tuple) -> None:
+    hour = t[0]
+    minute = t[1]
+    second = t[2]
+
+    print(f"{hour:02}:{minute:02}:{second:02}")
 
 def print_time(t:tuple, big=False) -> None:
     """Print the time on cli"""
